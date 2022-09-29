@@ -23,6 +23,7 @@
     <img class="detail-image" src="./assets/image-placeholder.jpg" alt="Insert Name Here" />
     <h2 class="name">Insert Name Here</h2>
     <h3 class="restaurant">Insert Restaurant Here</h3>
+    <input type="hidden" name="dbId" id="dbId" value ="">
   </div>
 
   <h3>Rating:</h3>
@@ -34,21 +35,34 @@
     Insert comment here
   </p>
 
+  <!-- buttons -->
+  <div>
+    <br>
+    <button class="btn-add">Add</button>
+    <button class="btn-edit">Edit</button>
+    <button class="btn-delete">Delete</button>
+  </div>
+
   <!-- New Ramen Form -->
-  <form id="new-ramen">
-    <h4>Add New Ramen</h4>
-    <label for="name">Name: </label>
-    <input type="text" name="name" id="newName" />
-    <label for="restaurant">Restaurant: </label>
-    <input type="text" name="restaurant" id="newRestaurant" />
-    <label for="image">Image: </label>
-    <input type="text" name="image" id="newImage" />
-    <label for="rating">Rating: </label>
-    <input type="number" name="rating" id="newRating" />
-    <label for="new-comment">Comment: </label>
-    <textarea name="new-comment" id="newComment"></textarea>
-    <input type="submit" value="Create" />
-  </form>
+  <div id="form-container">
+    
+    <form id="new-ramen">
+      <input type="hidden" name="submitType" id="submitType" value ="add">
+      <h4>Add New Ramen</h4>
+      <label for="name">Name: </label>
+      <input type="text" name="name" id="newName" />
+      <label for="restaurant">Restaurant: </label>
+      <input type="text" name="restaurant" id="newRestaurant" />
+      <label for="image">Image: </label>
+      <input type="text" name="image" id="newImage" />
+      <label for="rating">Rating: </label>
+      <input type="number" name="rating" id="newRating" />
+      <label for="new-comment">Comment: </label>
+      <textarea name="new-comment" id="newComment"></textarea>
+      <input type="submit" value="Create" />
+    </form>
+    <button class="btn-close">Close</button>
+  </div>
 
 </body>
 

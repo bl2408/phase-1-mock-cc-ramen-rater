@@ -69,10 +69,14 @@ form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  background-color: white;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 input,
-textarea {
+textarea, button {
   font-size: 1rem;
   border: 1px solid black;
   background-color: white;
@@ -81,15 +85,15 @@ textarea {
   width: 100%;
 }
 
-input[type="submit"] {
+input[type="submit"], button {
   color: white;
   border: 1px solid white;
   background-color: black;
   cursor: pointer;
-  transition: all 0.3s;
+  /* transition: all 0.3s; */
 }
 
-input[type="submit"]:active {
+input[type="submit"]:active, button:active {
   background-color: gray;
 }
 
@@ -99,4 +103,26 @@ form h4 {
   margin: 0.5rem 0;
   color: white;
   background-color: black;
+}
+
+#form-container{
+  width: 100vw;
+  height: 100vh;
+  
+  position: absolute;
+  top:0;
+  left: 0;
+  z-index: 1;
+
+  background-color: rgba(0, 0, 0, 0.8);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
+}
+
+#form-container > * {
+  width: 300px;
 }
